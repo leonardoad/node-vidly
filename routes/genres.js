@@ -7,7 +7,6 @@ const genres = [
     { id: 3, name: 'Reggae' },
 ];
 
-
 router.get('/', (req, res) => {
     res.send(genres);
 });
@@ -71,7 +70,6 @@ function verifyGenre(genre) {
     const schema = {
         name: Joi.string().min(3).required(),
     }
-
     return Joi.validate(genre, schema);
 }
 
